@@ -20,7 +20,7 @@ const playRound = (playerSelection, computerSelection) => {
 
     //make playerSelection case-insensitive
     playerSelection = playerSelection.toLowerCase(); 
-    computerSelection = computerPlay(); 
+    
 
     //conditional to return string based on results of game
     if (playerSelection === computerSelection){
