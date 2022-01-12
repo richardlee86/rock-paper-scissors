@@ -26,7 +26,7 @@ const playRound = (playerSelection, computerSelection) => {
     if (playerSelection === computerSelection){
         return 'It\'s a tie!'; 
     } else if (playerSelection === 'rock' && computerSelection === 'scissors'){
-        return 'You win! Rock beats Scissors!'; 
+        return 'You Win! Rock beats Scissors!'; 
     } else if (playerSelection === 'rock' && computerSelection === 'paper'){
         return 'You Lose! Paper covers Rock!';
     } else if (playerSelection === 'paper' && computerSelection === 'scissors'){
@@ -42,11 +42,33 @@ const playRound = (playerSelection, computerSelection) => {
 }
 //Write a function called game that simulates the game being played 5 times and keeps score
 const game = () => {
-    let count = 0; 
-    do {
-        console.log(playRound(prompt('Please choose Rock, Paper or Scissors'), computerPlay()));
-        count ++;
-    } while (count < 5);
+    let playerScore = 0;
+    let computerScore = 0;
+    let value;    
+
+    for (let i = 0; i <= 4; i++) {
+         
+        value = (playRound(prompt('Please choose Rock, Paper or Scissors'), computerPlay()));                
+        console.log(value);
+        if (value === 'You Win! Rock beats Scissors!' || value === 'You Win! Paper covers Rock!' ||
+                value === 'You Win! Scissors cuts Paper!'){
+                    playerScore++;
+                } else if(value === 'You Lose! Paper covers Rock!' || value === 'You Lose! Scissors cuts Paper!' || value === 'You Lose! Rock beats Scissors!') {
+                    computerScore++
+                }
+        
+    }    
+
+    //Display message based on scores of game 
+    if(playerScore > computerScore){
+        console.log('You Have Won the Game!');
+        console.log('Player Score: ' + playerScore + '\n' + 'Computer Score: ' + computerScore);
+    } else if (playerScore === computerScore){
+        console.log('It\'s a tie!');
+        console.log('Player Score: ' + playerScore + '\n' + 'Computer Score: ' + computerScore);
+    } else {
+        console.log('You Lost the Game...');
+        console.log('Player Score: ' + playerScore + '\n' + 'Computer Score: ' + computerScore);
+    }
 }
 
-game(); 
