@@ -44,9 +44,7 @@ const playRound = (playerSelection, computerSelection) => {
 const game = () => {
     let playerScore = 0;
     let computerScore = 0;
-    let value;    
-
-    for (let i = 0; i <= 4; i++) {
+    let value;       
          
         value = (playRound(prompt('Please choose Rock, Paper or Scissors'), computerPlay()));                
         console.log(value);
@@ -55,9 +53,8 @@ const game = () => {
                     playerScore++;
                 } else if(value === 'You Lose! Paper covers Rock!' || value === 'You Lose! Scissors cuts Paper!' || value === 'You Lose! Rock beats Scissors!') {
                     computerScore++
-                }
-        
-    }    
+                }        
+     
 
     //Display message based on scores of game 
     if(playerScore > computerScore){
@@ -72,3 +69,23 @@ const game = () => {
     }
 }
 
+let buttons = document.querySelectorAll('button');
+
+//Need to add function to get playerSelection
+buttons.forEach(e =>{
+    e.addEventListener('click', playRound(playerSelection, computerPlay()));
+});
+
+function playerSelection() {
+buttons.forEach(e => {
+    e.addEventListener('click', function(){
+        if(e.innerHTML === 'Rock'){
+            return 'Rock';
+        } else if(e.innerHTML === 'Paper') {
+            return 'Paper'; 
+        } else if (e.innerHTML === 'Scissors'){
+            return 'Scissors'; 
+        }
+    })
+});
+}

@@ -1,0 +1,25 @@
+html {
+    font-size: 18px;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.buttonDiv {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+button {
+    height: 5rem;
+    width: 15rem;
+}
+button:hover {
+    cursor: pointer;
+}
