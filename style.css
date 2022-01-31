@@ -23,3 +23,10 @@ button {
 button:hover {
     cursor: pointer;
 }
+.score {
+    font-size: 3rem;
+    display: flex;
+    gap: 15rem;
+    height: 10rem;
+    width: 100%;
+}
