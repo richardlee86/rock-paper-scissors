@@ -1,32 +1,66 @@
 html {
-    font-size: 18px;
+  font-size: 18px;
+  font-family: "Prompt", sans-serif;
+}
+body {
+  background-color: rgb(97, 149, 209);
 }
 
 .content {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
+}
+h1 {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 5rem;
+  font-size: 3rem;
+  padding-top: 2.5rem;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .buttonDiv {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
 }
 button {
-    height: 5rem;
-    width: 15rem;
+  height: 5rem;
+  width: 15rem;
+  font-size: 2rem;
 }
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 .score {
-    font-size: 3rem;
-    display: flex;
-    gap: 15rem;
-    height: 10rem;
-    width: 100%;
+  font-size: 3rem;
+  display: flex;
+  height: 3rem;
+  width: 100%;
+  margin-top: 4rem;
+  padding-left: 29rem;
+}
+#player {
+  margin-right: 41rem;
+}
+.scoreText {
+  font-size: 3rem;
+  display: flex;
+  height: 10rem;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 0rem;
+}
+
+.roundResult {
+  height: 12rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  margin-top: 1rem;
 }
